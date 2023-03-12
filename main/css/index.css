@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+body {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.background-color {
+    background: linear-gradient(120deg, #0b5281, #8e44ad);
+    background-attachment: fixed;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+/*Fejléc*/
+.welcome {
+    margin-top: 50px;
+    border-bottom: solid black 2px;
+    color: green;
+}
+
+/*Ez a szövegdoboznak a címét állítja*/
+.custom-field {
+    position: relative;
+    font-size: 14px;
+    padding-top: 20px;
+    margin-top: 5px;
+}
+
+/*Ez a szövegdoboz*/
+.custom-field input {
+    padding: 12px;
+    width: 300px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 2px solid black;
+    outline-color: black;
+}
+
+.custom-field {
+    transition: all 0.2s ease-in-out;
+}
+
+.custom-field input:hover {
+    border: green dashed 2px;
+}
+
+/*Ez a szövegdobozan lévő ki írt háttér szöveg*/
+.custom-field .placeholder {
+    position: absolute;
+    left: 12px;
+    top: calc(50% + 10px);
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+
+/*Ha belekattintok szöveg felmegy egy kicsit*/
+.custom-field input:valid+.placeholder,
+.custom-field input:focus+.placeholder {
+    top: 21px;
+    font-size: 10px;
+    color: #222;
+    padding: 5px;
+    background: white;
+}
+
+/*Ez a bejelentkezési ablak*/
+.loginBox {
+    border: solid black 2px;
+    border-radius: 10px;
+    background-color: white;
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Ezek a gombok*/
+.login,
+.singup {
+    border: solid 2px black;
+    border-radius: 10px;
+    padding: 5px 20px 5px 20px;
+    width: 55%;
+    margin-top: 10px;
+    color: green;
+    background-color: white;
+    font: bolder;
+    transition: all 0.2s ease-in-out;
+}
+
+.forgotPass {
+    margin-top: 10px;
+    color: green;
+    display: inline-block;
+    position: relative;
+    transition: all 1s ease;
+}
+
+.forgotPass::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: green;
+    transform: scaleX(0);
+    transition: transform .5s ease;
+}
+
+.forgotPass:hover::before {
+    transform: scaleX(1);
+}
+
+.forgotPass:hover {
+    color: black;
+}
+
+/*Ha ráviszem az egeret a gombra*/
+.login:hover,
+.singup:hover {
+    color: black;
+    background-color: green;
+    transform: scale(1.05);
+}
+
+/*Verzió ki írása*/
+#version-number {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+}
+
+
+#popup-version {
+    display: none;
+    overflow: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+    animation: slideIn 1s ease-in-out;
+    border: solid 2px black;
+    border-radius: 10px;
+    color: white;
+    text-align: left;
+    padding: 15px;
+    font-weight: bolder;
+    background: linear-gradient(120deg, #0b5281, #8e44ad);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.version-log li {
+    list-style: none;
+}
+
+#version-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translate(-50%, 100%);
+    }
+
+    to {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translate(-50%, -50%);
+    }
+
+    to {
+        transform: translate(-50%, 100%);
+    }
+}
+
+.show-version-popup-wrapper {
+    transform: translate(0, -50%);
+}
+
+#version-number:hover {
+    cursor: pointer;
+}
+
+.background-color {
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+}
+
+
+
+.message {
+    font-size: 70px;
+    font-family: 'Ubuntu', sans-serif;
+    color: steelblue;
+}
+
+.success {
+    font-size: 18px;
+    margin-top: 15px;
+    color: seagreen;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*menü*/
+/*Menü*/
+:root {
+    --alap: green;
+    --ligth: #EEEEEE;
+    --dark: #212121;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: var(--dark);
+    padding: 16px 32px;
+    border-bottom: 3px solid var(--alap);
+}
+
+.h1 {
+    color: #e61313;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.menu {
+    display: none;
+    align-items: center;
+    margin: 0 -1rem;
+}
+
+.menu a {
+    color: #FFF;
+    margin: 0 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.4s;
+    padding: 8px 16px;
+    border-radius: 99px;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu a.is-active,
+.menu a:hover {
+    background-color: var(--alap);
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+    padding-top: 6rem;
+    opacity: 0;
+    transform: translateY(100%);
+    background-color: var(--dark);
+    color: var(--ligth);
+    transition: all 0.2s ease-in-out;
+}
+
+.mobile-menu.is-open {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile-menu a {
+    display: block;
+    color: #FFF;
+    margin: 16px;
+    font-weight: 600;
+    font-size: 2.25rem;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.4s;
+    padding: 8px 16px;
+    border-radius: 99px;
+    transform: scale(1.05);
+}
+
+.menu a.is-active,
+.menu a:hover {
+    background-color: var(--alap);
+}
+
+.mobile-menu a:hover {
+    color: var(--ligth);
+    background-color: var(--alap);
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: var(--ligth);
+    border-radius: 6px;
+    z-index: 1;
+    transform-origin: 0 0;
+    transition: 0.4s;
+}
+
+.hamburger:hover span:nth-child(1) {
+    background-color: var(--alap);
+}
+
+.hamburger:hover span:nth-child(2) {
+    transform: translateX(-10px);
+    background-color: var(--alap);
+}
+
+.hamburger:hover span:nth-child(3) {
+    transform: translateX(-20px);
+    background-color: var(--alap);
+}
+
+.hamburger.is-active span:nth-child(1) {
+    transform: translate(0px, -2px) rotate(45deg);
+}
+
+.hamburger.is-active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(15px);
+}
+
+.hamburger.is-active span:nth-child(3) {
+    transform: translate(-3px, 3px) rotate(-45deg);
+}
+
+.hamburger.is-active:hover span {
+    background-color: var(--alap);
+}
+
+@media (min-width: 768px) {
+
+    .mobile-menu,
+    .hamburger {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .a4-css,
+    .a4-html {
+        display: block;
+    }
+}
+
+.logout {
+    margin-left: 0px;
+    /*ha itt auton van akkor a css felirat nem középen lesz*/
+}
+
+/*Háttér*/
+.background-color-html {
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+}
+
+.background-color-css {
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+}
+
+.background-color {
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+}
+
+/*Szöveg*/
+.a4-html {
+    margin: auto;
+    border: 5px solid;
+    max-width: 1200px;
+    padding: 10px;
+    background-color: white;
+}
+
+.a4-css {
+    margin: auto;
+    border: 5px solid;
+    max-width: 1200px;
+    padding: 10px;
+    background-color: white;
+}
+
+#textBox {
+    padding: 10px;
+    background-color: lightgray;
+    width: 350px;
+}
+
+/*CSS listához*/
+.none {
+    list-style-type: none;
+}
+
+.disc {
+    list-style-type: disc;
+}
+
+.circle {
+    list-style-type: circle;
+}
+
+.square {
+    list-style-type: square;
+}
+
+.decimal {
+    list-style-type: decimal;
+}
+
+.decimal-leading-zero {
+    list-style-type: decimal-leading-zero;
+}
+
+.lower-alpha {
+    list-style-type: lower-alpha;
+}
+
+.upper-alpha {
+    list-style-type: upper-alpha;
+}
+
+.lower-roman {
+    list-style-type: lower-roman;
+}
+
+.upper-roman {
+    list-style-type: upper-roman;
+}
+
+.lower-greek {
+    list-style-type: lower-greek;
+}
+
+.upper-greek {
+    list-style-type: upper-greek;
+}
+
+.lower-latin {
+    list-style-type: lower-latin;
+}
+
+.upper-latin {
+    list-style-type: upper-latin;
+}

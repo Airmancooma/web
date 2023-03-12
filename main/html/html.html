@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>HTML</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/logout.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
+    <link rel="stylesheet" href="../css/index2.css">
+</head>
+
+<body class="background-color-html">
+    <header>
+        <nav>
+            <div class="container">
+                <h1 class="h1">TAG'S</h1>
+                <div class="menu">
+                    <a href="html.html">HTML</a>
+                    <a href="css.html">CSS</a>
+                    <a href="hazik.html">HÁZIK</a>
+                    <a onclick="logout()" href="#">KIJELENTKEZÉS</a>
+                </div>
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <a href="html.html">HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="hazik.html">HÁZIK</a>
+            <a onclick="logout()" href="#">KIJELENTKEZÉS</a>
+        </div>
+    </header>
+    <br>
+    <div class="a4-html">
+        <h1>DKT Programozási alapok: Webszerkesztési alapok stíluslapok használata</h1>
+        <p>A stíluslapok használata azt jelenti, hogy egy HTML oldalhoz egyszerűen hozzáadhatunk egy CSS stíluslapot,
+            amely
+            megadja az oldal megjelenésének a beállításait. Ez a szabványos megjelenésű oldalak fejlesztésének kulcsa,
+            mivel
+            lehetővé teszi a kód újrakeresését és szétszórását. A stíluslapok használata HTML és CSS parancsokkal
+            történik.
+        </p>
+        <h2>HTML tagek</h2>
+        <p>A HTML parancsok az oldal lényegi részét képezik, amely megadja a tartalom tényleges megjelenítését. HTML-ben
+            a
+            leggyakrabban használt parancsok a következők:</p>
+        <hr>
+        <ul>
+            <li>&lt;html&gt; és &lt;/html&gt; - a HTML dokumentum kezdete és vége</li>
+            <li>&lt;head&gt; és &lt;/head&gt; - a HTML dokumentum fejléce</li>
+            <li>&lt;style&gt;és &lt;/style&gt;- a Stíluslap eleje és vége</li>
+            <li>&lt;title&gt; és &lt;/title&gt; - a HTML dokumentum címe</li>
+            <li>&lt;body&gt; és &lt;/body&gt; - a HTML dokumentum tartalma</li>
+            <li>&lt;title&gt; és &lt;/title&gt; - a fülön lévő felirat</li>
+            <li>&lt;h1&gt; és &lt;/h1&gt; - fejléc</li>
+            <li>&lt;p&gt; és &lt;/p&gt; - bekezdés</li>
+            <li>&lt;ul&gt; és &lt;/ul&gt; - lista</li>
+            <li>&lt;li&gt; és &lt;/li&gt; - listaelem</li>
+            <li>@import url - Külső stíluslap importálása</li>
+            <li>&lt;img&gt; - kép beillesztése</li>
+            <li>&lt;a&gt; és &lt;/a&gt; - hivatkozás</li>
+        </ul>
+        <hr>
+        <ul>
+            <li><strong>Táblázat:</strong></li>
+            <ul>
+                <li>&lt;table&gt; és &lt;/table&gt; - táblázat</li>
+                <li>&lt;tr&gt; és &lt;/tr&gt; - táblázat sor</li>
+                <li>&lt;td&gt; és &lt;/td&gt; - táblázat cella</li>
+            </ul>
+        </ul>
+        <hr>
+        <ul>
+            <li>&lt;form&gt; és &lt;/form&gt; - űrlap</li>
+            <li>&lt;input&gt; - beviteli mező</li>
+            <li>&lt;button&gt; és &lt;/button&gt; - gomb</li>
+            <li>&lt;select&gt; és &lt;/select&gt; - legördülő menü</li>
+            <li>&lt;textarea&gt; és &lt;/textarea&gt; - szövegterület</li>
+            <li>&lt;fieldset&gt; és &lt;/fieldset&gt; - mezőcsoport</li>
+            <li>&lt;legend&gt; és &lt;/legend&gt; - jelmagyarázat</li>
+            <li>&lt;br&gt; - sortörés</li>
+            <li>&lt;hr&gt; - vízszintes elválasztó</li>
+            <li>&lt;pre&gt; és &lt;/pre&gt; - előre formázott szöveg</li>
+            <li>&lt;code&gt; és &lt;/code&gt; - kód</li>
+            <li>&lt;blockquote&gt; és &lt;/blockquote&gt; - idézet</li>
+        </ul>
+        <hr>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+
+    <script src="../javascript/firebase.js"></script>
+    <script src="../javascript/welcome.js"></script>
+    <script src="../javascript/logout.js"></script>
+    <script src="../javascript/menu.js"></script>
+</body>
+
+</html>

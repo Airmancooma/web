@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/logout.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
+    <link rel="stylesheet" href="../css/index2.css">
+    <title>CSS</title>
+</head>
+
+<body class="background-color-css">
+    <header>
+        <nav>
+            <div class="container">
+                <h1 class="h1">TAG'S</h1>
+                <div class="menu">
+                    <a href="html.html">HTML</a>
+                    <a href="css.html">CSS</a>
+                    <a href="hazik.html">HÁZIK</a>
+                    <a onclick="logout()" href="#">KIJELENTKEZÉS</a>
+                </div>
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <a href="html.html">HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="hazik.html">HÁZIK</a>
+            <a onclick="logout()" href="#">KIJELENTKEZÉS</a>
+        </div>
+    </header>
+    <br>
+    <div class="a4-css">
+        <h1>DKT Programozási alapok: Webszerkesztési alapok stíluslapok használata</h1>
+        <p>A stíluslapok használata azt jelenti, hogy egy HTML oldalhoz egyszerűen hozzáadhatunk egy CSS stíluslapot,
+            amely
+            megadja az oldal megjelenésének a beállításait. Ez a szabványos megjelenésű oldalak fejlesztésének kulcsa,
+            mivel
+            lehetővé teszi a kód újrakeresését és szétszórását. A stíluslapok használata HTML és CSS parancsokkal
+            történik.
+        </p>
+        <h2>CSS tagek</h2>
+        <p>A CSS parancsok segítségével lehetővé válik az oldal megjelenésének szabályozása. A leggyakrabban használt
+            CSS
+            parancsok a következők:</p>
+        <hr>
+        <ul>
+            <li>font-family - betűtípusok megadása</li>
+            <li>Serif - elsősorban nyomtatásban használt, talpas betűtípus</li>
+            <li>Sans-serif - a képernyőn jól mutató, modern megjelenésű, talp nélküli betűtípusok</li>
+            <li>Monospace - azonos szélességű karaktereket használó, írógéppel írt hatást keltő betűtípus család</li>
+            <li>Cursive - kézírásra emlékeztető, nehezen olvasható, elsősorban dekoratív célokat szolgáló betűtípus</li>
+            <li>font-weight</li>
+            <li>font-size - betűméret megadása</li>
+        </ul>
+        <hr>
+        <ul>
+            <li><strong>Abszolút méret megadása:</strong></li>
+            <ul>
+                <li>Kulcsszavak használata - növekvő sorrendben: xx-small, x-small, small, medium(alapértelmezett),
+                    large,
+                    x-large, xx-large, xxx-large</li>
+                <li>hosszúság-mértégegységek használata (px)</li>
+            </ul>
+            <br>
+            <li><strong>Relatív méret megadása:</strong></li>
+            <ul>
+                <li>Kulcsszavak használata - smaller(kisebb), larger (nagyobb)</li>
+                <li>Relatív mértékegységek használata (em, %)</li>
+            </ul>
+        </ul>
+        <hr>
+        <ul>
+            <li>color - szöveg színének megadása</li>
+            <li>background-color - háttérszín megadása</li>
+            <li>margin - margók megadása</li>
+            <li>padding - párnázás megadása</li>
+            <li>border - szegély megadása</li>
+            <li>in - inch(hüvelyk)</li>
+            <li>cm - centiméter</li>
+            <li>pt - pont</li>
+            <li>px - pixel(képpont)</li>
+            <li>em - az aktuélis betűmérethez képest megadott méretet jelzi (1.2em az aktuális betűméretet 1,2-szeresére
+                növeli</li>
+            <li>% - széleskörben használható mértékegység</li>
+            <li>rem - a gyökérelem (a HTML-oldalánál a html elem) betűméretéhez képest megadott méretét jelzi</li>
+            <li>color - szín beállítása</li>
+            <li># - hexadecimális színkód</li>
+            <li>rgb - színkordináta-rendszer</li>
+            <li>hsl - színkordináta-rendszer</li>
+            <li>oblique - dőlt stílust eredményez az eredeti betűk számítógép általi megdöntésével</li>
+            <li>italic - az aktuális betűtípus dőlt variánsát jeleníti meg, ha van ilyen a betűkészletben</li>
+            <li>normal - a betűk stílusát normál stílusra állítja (vissza)</li>
+            <li>strong - erős kiemelés</li>
+            <li>font-variant betűváltozatok beállítása pl.: small-caps</li>
+        </ul>
+        <hr>
+        <ul>
+            <li><strong>font-stretch: - betűk nyújtása</strong></li>
+            <ul>
+                <br>
+                <li><strong>Sűrítés:</strong></li>
+                <ul>
+                    <li>ultra-condensed - 50% - 50% sűríti a betűket</li>
+                    <li>extra-condensed - 62.5% - 62.5% sűríti a betűket</li>
+                    <li>condensed - 75% - 75% sűríti a betűket</li>
+                    <li>semi-condensed - 87.5% - 87.5% sűríti a betűket</li>
+                </ul>
+                <br>
+                <li><strong>Normál:</strong></li>
+                <ul>
+                    <li>normal - 100% - normál</li>
+                </ul>
+                <br>
+                <li><strong>Ritkítás:</strong></li>
+                <ul>
+                    <li>semi-condensed - 112.5% - 112.5% ritkítja a betűket</li>
+                    <li>expandded - 125% - 125% ritkítja a betűket</li>
+                    <li>extra-expanded 150% - 150% ritkítja a betűket</li>
+                    <li>ultra-expanded - 200% - 200% ritkítja a betűket</li>
+                </ul>
+            </ul>
+        </ul>
+        <hr>
+        <ul>
+            <li><strong>Szegélyek:</strong></li>
+            <ul>
+                <li>solid - folytonos szegély</li>
+                <li>dotted - pontozott szegély</li>
+                <li>dashed - szaggatott szegély</li>
+                <li>double - dupla szegély</li>
+                <li>grovove - barázdált hatású szegély</li>
+                <li>ridge - a kjépernyő síkjához képest kiemelt hatású szegély</li>
+                <li>inset - süllyesztett hatású (3D) dobozt eredményez</li>
+                <li>outset - kiemelt hatású (3D) dobozt eredményez</li>
+            </ul>
+        </ul>
+        <hr>
+        <ul>
+            <li>text-align - szöveg igazítása (left, center, right, justify)</li>
+            <li>text-decoration - szöveg díszítése (underline, overline, line-through, none)</li>
+            <li>line-height - sor magasságának beállítása</li>
+            <li>word-wrap - szavak átcsoportosítása a következő sorra, ha nem férnek el a jelenlegi sorban</li>
+            <li>white-space - szöveg alapértelmezett sortörésének beállítása (normal, nowrap, pre)</li>
+            <li>display - elem megjelenésének beállítása (block, inline, inline-block, flex, grid, none)</li>
+            <li>float - elem flottálása (left, right, none)</li>
+            <li>clear - elem flottálási tulajdonságainak törlése (left, right, both, none)</li>
+            <li>position - elem pozícionálásának beállítása (static, relative, absolute, fixed)</li>
+            <li>top, bottom, left, right - elem pozícionálásának beállítása (pl. position: absolute; top: 20px; left:
+                30px;)
+            </li>
+            <li>overflow - elem tartalmának kibuggyanásának kezelése (visible, hidden, scroll, auto)</li>
+            <li>z-index - elemek egymás feletti rendezésének beállítása</li>
+            <li>box-sizing - elem méretének beállítása (content-box, border-box)</li>
+        </ul>
+        <hr>
+        <ul>
+            <li><strong>Flex:</strong></li>
+            <ul>
+                <li>flex-direction - flex elemek irányának beállítása (row, row-reverse, column, column-reverse)</li>
+                <li>justify-content - flex elemek igazítása a tengely mentén (flex-start, flex-end, center,
+                    space-between,
+                    space-around)</li>
+                <li>align-items - flex elemek igazítása a kereszt tengely mentén (flex-start, flex-end, center,
+                    baseline,
+                    stretch)</li>
+                <li>align-content - több soros flex elemek igazítása a kereszt tengely mentén (flex-start, flex-end,
+                    center,
+                    space-between, space-around, stretch)</li>
+                <li>flex-wrap - flex elemek új sorba rendezése, ha nem férnek el a jelenlegi sorban (nowrap, wrap,
+                    wrap-reverse)
+                </li>
+                <li>order - flex elemek megjelenési sorrendjének beállítása</li>
+            </ul>
+        </ul>
+        <hr>
+        <ul>
+            <li><strong>List-style</strong></li>
+            <ul>
+                <li class="none">none - nem jelenik meg semmi</li>
+                <li class="disc">disc - egy kis korong jelenik meg</li>
+                <li class="circle">circle - kört rajzol a listaelemekhez</li>
+                <li class="square">square - négyzetet rajzol a listaelemekhez</li>
+                <li class="decimal">decimal - számokkal jelöli a listaelemeket</li>
+                <li class="decimal-leading-zero">decimal-leading-zero - számokkal jelöli a listaelemeket, és nullákkal
+                    tölti ki a rövidebb számokat</li>
+                <li class="lower-alpha">lower-alpha - kisbetűs betűsorozat jelöli a listaelemeket</li>
+                <li class="upper-alpha">upper-alpha - nagybetűs betűsorozat jelöli a listaelemeket</li>
+                <li class="lower-roman">lower-roman - római számokkal jelöli a listaelemeket</li>
+                <li class="upper-roman">upper-roman - nagybetűs római számokkal jelöli a listaelemeket</li>
+                <li class="lower-greek">lower-greek - görög betűkkel jelöli a listaelemeket</li>
+                <li class="upper-greek">upper-greek - nagybetűs görög betűkkel jelöli a listaelemeket</li>
+                <li class="lower-latin">lower-latin - latin betűkkel jelöli a listaelemeket</li>
+                <li class="upper-latin">upper-latin - nagybetűs latin betűkkel jelöli a listaelemeket</li>
+            </ul>
+        </ul>
+        <p>Ezek a parancsok lehetővé teszik, hogy az oldal megjelenését megváltoztassuk, hogy jobban illeszkedjen a
+            célközönség igényeihez.</p>
+
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <script src="../javascript/firebase.js"></script>
+    <script src="../javascript/welcome.js"></script>
+    <script src="../javascript/logout.js"></script>
+    <script src="../javascript/menu.js"></script>
+</body>
+
+</html>

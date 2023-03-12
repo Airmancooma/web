@@ -1,0 +1,332 @@
+body {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    padding: 40px;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    margin: 20px 0;
+    text-align: left;
+    width: 100%;
+    color: green;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 40px;
+    padding: 10px;
+    width: 95.3%;
+    color: gray;
+    border: black solid 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+input[type="text"],
+input[type="password"] {
+    color: gray;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover {
+    background-color: green;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    color: black;
+}
+
+button[type="submit"] {
+    background-color: white;
+    border: black solid 2px;
+    border-radius: 5px;
+    color: green;
+    cursor: pointer;
+    font-size: 18px;
+    height: 40px;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: bolder;
+    transition: all 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    color: black;
+    background-color: green;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/*Verzió ki írása*/
+#version-number {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+    animation: slideIn 1s ease-in-out;
+    border: solid 1px black;
+    border-radius: 10px;
+    color: white;
+    text-align: left;
+    padding: 15px;
+    font-weight: bolder;
+    background: linear-gradient(120deg, #0b5281, #8e44ad);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+#close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translate(-50%, 100%);
+    }
+
+    to {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translate(-50%, -50%);
+    }
+
+    to {
+        transform: translate(-50%, 100%);
+    }
+}
+
+
+.show-version-popup-wrapper {
+    transform: translate(0, -50%);
+}
+
+#version-popup {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    color: #fff;
+    text-align: left;
+    list-style: none;
+}
+
+#version-number:hover {
+    cursor: pointer;
+}
+
+.background-color {
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+}
+
+#username,
+#password {
+    font-weight: bolder;
+}
+
+/*Felirat a szövegdobozban*/
+#username::-webkit-input-placeholder {
+    color: green;
+    font-weight: bolder;
+}
+
+
+#username::-moz-placeholder {
+    color: green;
+    opacity: 1;
+    font-weight: bolder;
+}
+
+#username:-ms-input-placeholder {
+    color: green;
+    font-weight: bolder;
+}
+
+#username::placeholder {
+    color: green;
+    font-weight: bolder;
+}
+
+#password::-webkit-input-placeholder {
+    color: green;
+    font-weight: bolder;
+}
+
+#password::-moz-placeholder {
+    color: green;
+    opacity: 1;
+    font-weight: bolder;
+}
+
+#password:-ms-input-placeholder {
+    color: green;
+    font-weight: bolder;
+}
+
+#password::placeholder {
+    color: green;
+    font-weight: bolder;
+}
+
+/*Felirat a szövegdobozban ha ráviszed az egeret*/
+#username:hover::-webkit-input-placeholder {
+    color: black;
+
+}
+
+#username:hover::-moz-placeholder {
+    color: black;
+    opacity: 1;
+    ;
+}
+
+#username:hover:-ms-input-placeholder {
+    color: black;
+
+}
+
+#username:hover::placeholder {
+    color: black;
+
+}
+
+#password:hover::-webkit-input-placeholder {
+    color: black;
+
+}
+
+#password:hover::-moz-placeholder {
+    color: black;
+    opacity: 1;
+
+}
+
+#password:hover:-ms-input-placeholder {
+    color: black;
+
+}
+
+#password:hover::placeholder {
+    color: black;
+
+}
+
+/*Felirat a szövegdobozban ha bele vagy kattintva szövegdobozba*/
+#username:focus::-webkit-input-placeholder {
+    color: black;
+
+}
+
+#username:focus::-moz-placeholder {
+    color: black;
+    opacity: 1;
+
+}
+
+#username:focus:-ms-input-placeholder {
+    color: black;
+
+}
+
+#username:focus::placeholder {
+    color: black;
+
+}
+
+#password:focus::-webkit-input-placeholder {
+    color: black;
+
+}
+
+#password:focus::-moz-placeholder {
+    color: black;
+    opacity: 1;
+
+}
+
+#password:focus:-ms-input-placeholder {
+    color: black;
+
+}
+
+#password:focus::placeholder {
+    color: black;
+}
+
+/*Sikeresen bejelentkezés popup*/
+#login-form {
+    display: none;
+}
+
+#success-message-container {
+    color: green;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    padding: 45px;
+    border: 2px solid black;
+}
+
+#greeting {
+    font-size: 28px;
+}
+
+#success-message {
+    font-size: 18px;
+}
+
+/*Verzió popup-ban lévő szöveg*/
+li {
+    list-style: none;
+}

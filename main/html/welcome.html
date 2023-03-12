@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üdvözlünk!</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
+    <link href="../css/index.css" rel="stylesheet" />
+</head>
+
+<body class="background-color">
+    <div class="loginBox">
+        <div class="welcome">
+            <center>
+                <h3>Üdvözlünk!</h3>
+            </center>
+        </div>
+        <form onsubmit="login()" id="loginForm" class="card-body px-5 py-4">
+            <center><small><span id="error" style="color: red"></span></small></center>
+            <center>
+                <label class="custom-field">
+                    <input id="email" type="text" class="input" required />
+                    <span class="placeholder">Email cím</span>
+                </label><br />
+                <label class="custom-field">
+                    <input id="password" type="password" class="input" required />
+                    <span class="placeholder">Jelszó</span>
+                </label>
+            </center><br /><br />
+            <center>
+                <button type="submit" class="login">Bejelentkezés</button>
+                <button onclick="window.location.href='registration.html'" class="singup">Regisztráció</button>
+            </center>
+            <center>
+                <a class="forgotPass" href="#" onclick="forgotPass()">Elfelejtett Jelszó</a>
+            </center>
+        </form>
+    </div>
+    <div id="version-number">V2.1-beta</div>
+    <div id="popup-version">
+        <span id="version-close-button">X</span>
+        <div class="version-log">
+        </div>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+
+    <script src="../javascript/firebase.js"></script>
+    <script src="../javascript/welcome.js"></script>
+    <script src="../javascript/version.js"></script>
+</body>
+
+</html>
